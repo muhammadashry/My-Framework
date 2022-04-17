@@ -2,34 +2,34 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-17T22:58:55 EET" name="Default Suite" finished-at="2022-04-17T22:59:17 EET" duration-ms="21676">
+  <suite started-at="2022-04-18T00:20:33 EET" name="Default Suite" finished-at="2022-04-18T00:20:55 EET" duration-ms="21837">
     <groups>
     </groups>
-    <test started-at="2022-04-17T22:58:55 EET" name="Gemys_Task" finished-at="2022-04-17T22:59:17 EET" duration-ms="21676">
+    <test started-at="2022-04-18T00:20:33 EET" name="Gemys_Task" finished-at="2022-04-18T00:20:55 EET" duration-ms="21837">
       <class name="createanaccounttests.CreateAnAccountTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:createanaccounttests.CreateAnAccountTests@3c22fc4c]" started-at="2022-04-17T22:58:55 EET" name="setUpClass" finished-at="2022-04-17T22:58:55 EET" duration-ms="401" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4690b489]" started-at="2022-04-18T00:20:34 EET" name="setUpClass" finished-at="2022-04-18T00:20:34 EET" duration-ms="481" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@640ab13c]]>
+                <![CDATA[org.testng.TestRunner@2b9f74d0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@3c22fc4c]" started-at="2022-04-17T22:58:55 EET" name="setUp" finished-at="2022-04-17T22:59:07 EET" duration-ms="11898" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4690b489]" started-at="2022-04-18T00:20:34 EET" name="setUp" finished-at="2022-04-18T00:20:43 EET" duration-ms="9386" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@3c22fc4c]" started-at="2022-04-17T22:59:07 EET" name="createValidAccount" data-provider="CSV" finished-at="2022-04-17T22:59:17 EET" duration-ms="9282" status="PASS">
+        <test-method signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4690b489]" started-at="2022-04-18T00:20:43 EET" name="createValidAccount" data-provider="CSV" finished-at="2022-04-18T00:20:55 EET" duration-ms="11869" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,18 +85,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createValidAccount -->
-        <test-method is-config="true" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:createanaccounttests.CreateAnAccountTests@3c22fc4c]" started-at="2022-04-17T22:59:17 EET" name="recoredFaliures" finished-at="2022-04-17T22:59:17 EET" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4690b489]" started-at="2022-04-18T00:20:55 EET" name="recoredFaliures" finished-at="2022-04-18T00:20:55 EET" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createValidAccount status=SUCCESS method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@3c22fc4c] output={null}]]]>
+                <![CDATA[[TestResult name=createValidAccount status=SUCCESS method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4690b489] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recoredFaliures -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:createanaccounttests.CreateAnAccountTests@3c22fc4c]" started-at="2022-04-17T22:59:17 EET" name="tearDownClass" finished-at="2022-04-17T22:59:17 EET" duration-ms="22" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:createanaccounttests.CreateAnAccountTests@4690b489]" started-at="2022-04-18T00:20:55 EET" name="tearDownClass" finished-at="2022-04-18T00:20:55 EET" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
