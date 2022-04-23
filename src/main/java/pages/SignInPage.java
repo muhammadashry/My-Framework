@@ -10,13 +10,13 @@ public class SignInPage extends PageBase {
 
     public void enterEmail(String id,String email) {
         timeToWait.explicitWaits(driver,20,id,"id");
-        makeAction.makeAction("id",id,email);
+        action.makeAction("id",id,email);
         log.getLog("Click on SignInPage method");
 
     }
     public CreateAnAccountPage clickOnCreateAnAccount(String id){
         timeToWait.explicitWaits(driver,10,id,"id");
-        makeAction.makeAction("id",id,true);
+        action.makeAction("id",id,true);
         log.getLog("Click on clickOnCreateAnAccount method");
         return new CreateAnAccountPage(driver);
 
