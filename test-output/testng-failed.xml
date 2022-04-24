@@ -6,9 +6,10 @@
       <class name="createanaccounttests.CreateAnAccountTests">
         <methods>
           <include name="setUpClass"/>
+          <include name="tearDown"/>
           <include name="recoredFaliures"/>
-          <include name="setUp"/>
           <include name="tearDownClass"/>
+          <include name="setUp"/>
           <include name="createValidAccount" invocation-numbers="0"/>
         </methods>
       </class> <!-- createanaccounttests.CreateAnAccountTests -->
