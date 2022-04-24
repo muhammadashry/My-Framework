@@ -1,0 +1,4 @@
+basetests\BaseTests.class
+createanaccounttests\CreateAnAccountTests.class
+assertions\Assertions.class
+crossbrowserscropt\CrossBrowserScript.class

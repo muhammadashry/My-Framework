@@ -61,7 +61,7 @@ public class BaseTests extends AbstractTestNGCucumberTests {
     public void recoredFaliures(ITestResult result) throws IOException {
         if (ITestResult.FAILURE == result.getStatus()) {
             Path dest = Paths.get("./ScreanShots", result.getName() + ".png");
-            var camera = (TakesScreenshot) driver;
+            TakesScreenshot camera = (TakesScreenshot) driver;
             File screenShot = camera.getScreenshotAs(OutputType.FILE);
             FileOutputStream out = new FileOutputStream(dest.toString());
             out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));

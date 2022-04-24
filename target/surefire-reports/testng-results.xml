@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="18046" started-at="2022-04-24T16:24:27 EET" finished-at="2022-04-24T16:24:45 EET">
+    <groups>
+    </groups>
+    <test name="D:/ITI Study/automation/Gemy" duration-ms="18046" started-at="2022-04-24T16:24:27 EET" finished-at="2022-04-24T16:24:45 EET">
+      <class name="createanaccounttests.CreateAnAccountTests">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4d1b0d2a]" name="setUpClass" is-config="true" duration-ms="215" started-at="2022-04-24T16:24:27 EET" finished-at="2022-04-24T16:24:27 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5e8604bf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4d1b0d2a]" name="setUp" is-config="true" duration-ms="10439" started-at="2022-04-24T16:24:27 EET" finished-at="2022-04-24T16:24:38 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4d1b0d2a]" name="createValidAccount" duration-ms="7306" started-at="2022-04-24T16:24:38 EET" data-provider="CSV" finished-at="2022-04-24T16:24:45 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MohamedBeky@live.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ Mohamed]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ Ashry]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ Ashriaans]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[ 123456789]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[ Ain-Shams]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[ Egypt]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[ 90210]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[ 01117745460]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[ hena]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createValidAccount -->
+        <test-method status="PASS" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4d1b0d2a]" name="recoredFaliures" is-config="true" duration-ms="1" started-at="2022-04-24T16:24:45 EET" finished-at="2022-04-24T16:24:45 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createValidAccount status=SUCCESS method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@4d1b0d2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recoredFaliures -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:createanaccounttests.CreateAnAccountTests@4d1b0d2a]" name="tearDownClass" is-config="true" duration-ms="23" started-at="2022-04-24T16:24:45 EET" finished-at="2022-04-24T16:24:45 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- createanaccounttests.CreateAnAccountTests -->
+    </test> <!-- D:/ITI Study/automation/Gemy -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
