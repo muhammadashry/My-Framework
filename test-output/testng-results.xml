@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-23T02:03:41 EET" name="Default Suite" finished-at="2022-04-23T02:04:04 EET" duration-ms="23000">
+  <suite started-at="2022-04-24T21:40:49 EET" name="Default Suite" finished-at="2022-04-24T21:41:32 EET" duration-ms="43311">
     <groups>
     </groups>
-    <test started-at="2022-04-23T02:03:41 EET" name="Gemys_Task" finished-at="2022-04-23T02:04:04 EET" duration-ms="23000">
+    <test started-at="2022-04-24T21:40:49 EET" name="Gemys_Task" finished-at="2022-04-24T21:41:32 EET" duration-ms="43311">
       <class name="createanaccounttests.CreateAnAccountTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:createanaccounttests.CreateAnAccountTests@460d0a57]" started-at="2022-04-23T02:03:41 EET" name="setUpClass" finished-at="2022-04-23T02:03:42 EET" duration-ms="539" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:createanaccounttests.CreateAnAccountTests@957e06]" started-at="2022-04-24T21:40:49 EET" name="setUpClass" finished-at="2022-04-24T21:40:50 EET" duration-ms="402" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6c6366cf]]>
+                <![CDATA[org.testng.TestRunner@6c6017b9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@460d0a57]" started-at="2022-04-23T02:03:42 EET" name="setUp" finished-at="2022-04-23T02:03:54 EET" duration-ms="12189" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@957e06]" started-at="2022-04-24T21:40:50 EET" name="setUp" finished-at="2022-04-24T21:41:04 EET" duration-ms="14701" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,51 +29,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@460d0a57]" started-at="2022-04-23T02:03:54 EET" name="createValidAccount" data-provider="CSV" finished-at="2022-04-23T02:04:04 EET" duration-ms="10128" status="PASS">
+        <test-method signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@957e06]" started-at="2022-04-24T21:41:04 EET" name="createValidAccount" data-provider="CSV" finished-at="2022-04-24T21:41:31 EET" duration-ms="26898" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[MohamedBeky@live.com]]>
+                <![CDATA[g@live.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[ Mohamed]]>
+                <![CDATA[Mohamed]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[ Ashry]]>
+                <![CDATA[Ashry]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[ Ashriaans]]>
+                <![CDATA[Ashriaans]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[ 123456789]]>
+                <![CDATA[123456789]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[ Ain-Shams]]>
+                <![CDATA[Ain-Shams]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[ Egypt]]>
+                <![CDATA[Egypt]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[ 90210]]>
+                <![CDATA[11772]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[ 01117745460]]>
+                <![CDATA[01117745460]]>
               </value>
             </param>
             <param index="9">
@@ -82,21 +82,72 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: uniform-id_gender1 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-ISNDRDG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Muham\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57990}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57990/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ff42270ce55d50e3d77ee9cf5b3e00d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: uniform-id_gender1 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'DESKTOP-ISNDRDG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Muham\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57990}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57990/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ff42270ce55d50e3d77ee9cf5b3e00d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at helper.Waits.explicitWaits(Waits.java:20)
+at pages.CreateAnAccountPage.clickOnTitle(CreateAnAccountPage.java:12)
+at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:45)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createValidAccount -->
-        <test-method is-config="true" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:createanaccounttests.CreateAnAccountTests@460d0a57]" started-at="2022-04-23T02:04:04 EET" name="recoredFaliures" finished-at="2022-04-23T02:04:04 EET" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:createanaccounttests.CreateAnAccountTests@957e06]" started-at="2022-04-24T21:41:31 EET" name="recoredFaliures" finished-at="2022-04-24T21:41:32 EET" duration-ms="987" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createValidAccount status=SUCCESS method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@460d0a57] output={null}]]]>
+                <![CDATA[[TestResult name=createValidAccount status=FAILURE method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@957e06] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recoredFaliures -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:createanaccounttests.CreateAnAccountTests@460d0a57]" started-at="2022-04-23T02:04:04 EET" name="tearDownClass" finished-at="2022-04-23T02:04:04 EET" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:createanaccounttests.CreateAnAccountTests@957e06]" started-at="2022-04-24T21:41:32 EET" name="tearDownClass" finished-at="2022-04-24T21:41:32 EET" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

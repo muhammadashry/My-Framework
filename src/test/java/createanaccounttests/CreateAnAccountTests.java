@@ -4,6 +4,10 @@ import assertions.Assertions;
 import basetests.BaseTests;
 import com.opencsv.exceptions.CsvException;
 import helper.Reader;
+import io.qameta.allure.Description;
+import io.qameta.allure.Link;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -27,6 +31,8 @@ public class CreateAnAccountTests extends BaseTests {
          return usersData.getExcelData(properties.getProperty("excel.data.path"));
      }*/
     @Test(dataProvider = "CSV")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Create New Account")
     public void createValidAccount(String eMail, String fName,
                                    String lName, String companyName,
                                    String password, String address,
@@ -52,7 +58,7 @@ public class CreateAnAccountTests extends BaseTests {
         createAnAccountPage.fillPhoneNumber(getDataFromJsonFile("phonenumberlocator", 0), phoneNumber);
         createAnAccountPage.fillAddressAlias(getDataFromJsonFile("addressaliaslocator", 0), aliasAddress);
         createAnAccountPage.clickOnRigister(getDataFromJsonFile("registerlocator", 0));
-
+        assertions.assertOnPage(driver,"My account - My Store","The account does't created successfully");
     }
 
 }

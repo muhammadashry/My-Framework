@@ -13,10 +13,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pages.HomePage;
 
 import java.io.File;
@@ -77,9 +74,9 @@ public class BaseTests extends AbstractTestNGCucumberTests {
         log.getLog("Get Locator for: " + keyword);
         return (String) users.get(keyword);
     }
-    /*@AfterClass
+    @AfterClass
     public void tearDown(){
         driver.quit();
         log.getLog("Tear Down");
-    }*/
+    }
 }
