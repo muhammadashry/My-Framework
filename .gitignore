@@ -1,4 +1,6 @@
 .idea
 target
-test-output
 allure-results
+failure-screanshots
+successful-screanshots
+test-output

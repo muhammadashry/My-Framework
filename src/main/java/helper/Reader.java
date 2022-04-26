@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
@@ -42,8 +43,7 @@ public class Reader {
             }
             return csvCell;
     }
-        public JSONArray getAllUsersLocators (String JSON_PATH) throws IOException, ParseException {
-
+        private JSONArray getAllUsersLocators (String JSON_PATH) throws IOException, ParseException {
                 JSONParser jsonParser = new JSONParser();
                 FileReader reader = new FileReader(JSON_PATH);
                 //Read JSON file
@@ -52,6 +52,12 @@ public class Reader {
 
                 return usersList;
         }
+    public String getLocatorsFromJsonFile(String keyword,String path) throws IOException, ParseException {
+        JSONArray usersList= getAllUsersLocators(path);
+        JSONObject jsonObject = (JSONObject) usersList.get(0);
+        return (String) jsonObject.get(keyword);
+
+    }
 
     public Object[][] getExcelData(String filePath) throws IOException
     {

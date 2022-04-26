@@ -22,6 +22,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 public class BaseTests extends AbstractTestNGCucumberTests {
@@ -57,22 +59,19 @@ public class BaseTests extends AbstractTestNGCucumberTests {
     @AfterMethod
     public void recoredFaliures(ITestResult result) throws IOException {
         if (ITestResult.FAILURE == result.getStatus()) {
-            Path dest = Paths.get("./ScreanShots", result.getName() + ".png");
-            TakesScreenshot camera = (TakesScreenshot) driver;
-            File screenShot = camera.getScreenshotAs(OutputType.FILE);
+            Path dest = Paths.get("./failure-screanshots", result.getName() + ".png");
             FileOutputStream out = new FileOutputStream(dest.toString());
             out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
-            Files.move(screenShot, new File("D:\\Gemys_Data_Tasks\\" + " " + result.getName() + ".png"));
-
+        }
+        else{
+            Path dest = Paths.get("./successful-screanshots", result.getName() + ".png");
+            FileOutputStream out = new FileOutputStream(dest.toString());
+            out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
         }
     }
-
-    public String getDataFromJsonFile(String keyword, int index) throws IOException, ParseException {
-        locators = locatorReader.getAllUsersLocators(properties.getProperty("json.locator.path"));
-        log.getLog("Get All Locators");
-        users = (JSONObject) locators.get(index);
-        log.getLog("Get Locator for: " + keyword);
-        return (String) users.get(keyword);
+    // Move it to reader class make mapping
+    public String getLocatorsFromJsonFile(String keyword) throws IOException, ParseException {
+        return locatorReader.getLocatorsFromJsonFile(keyword,properties.getProperty("json.locator.path"));
     }
     @AfterClass
     public void tearDown(){

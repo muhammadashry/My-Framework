@@ -8,11 +8,11 @@ public class SignInPage extends PageBase {
         super(driver);
     }
 
-    public void enterEmail(String id,String email) {
+    public SignInPage enterEmail(String id,String email) {
         timeToWait.explicitWaits(driver,20,id,"id");
         action.makeAction("id",id,email);
         log.getLog("Click on SignInPage method");
-
+        return this;
     }
     public CreateAnAccountPage clickOnCreateAnAccount(String id){
         timeToWait.explicitWaits(driver,10,id,"id");
