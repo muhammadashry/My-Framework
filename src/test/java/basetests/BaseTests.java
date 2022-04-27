@@ -12,6 +12,8 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
@@ -20,10 +22,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 public class BaseTests extends AbstractTestNGCucumberTests {
@@ -31,15 +32,20 @@ public class BaseTests extends AbstractTestNGCucumberTests {
     protected HomePage homePage;
     protected Reader dataReader, locatorReader, excelReader;
     protected Properties properties;
-    protected JSONArray locators;
-    protected JSONObject users;
     protected CrossBrowserScript crossBrowserScript;
     private Logs log;
     private Assertions assertions;
+    protected String Node = "http://localhost:4444/wd/hub";
+    protected DesiredCapabilities caps;
 
     @BeforeClass
-    @Parameters({"broswer"})
-    public void setUp(@Optional("chrome") String broswerName) throws Exception {
+    @Parameters({"broswer","userGrid"})
+    public void setUp(@Optional("chrome") String broswerName,@Optional("false") Boolean useGrid) throws Exception {
+        if(useGrid== true) {
+            caps = new DesiredCapabilities();
+            caps.setBrowserName(broswerName);
+            driver = new RemoteWebDriver(new URL(Node), caps);
+        }
         assertions = new Assertions(driver);
         FileInputStream objFile = new FileInputStream("D:\\ITI Study\\automation\\Gemy\\src\\main\\resources\\config.properties");
         properties = new Properties();

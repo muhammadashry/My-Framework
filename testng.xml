@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="tests">
-    <parameter name="broswer" value="firefox"></parameter>
-    <test name="D:/ITI Study/automation/Gemy">
+    <test name="User registration using firefox">
+        <parameter name="broswer" value="firefox"></parameter>
+        <parameter name="userGrid" value="false"></parameter>
+        <classes>
+            <class name="createanaccounttests.CreateAnAccountTests">
+                <methods><include name="createValidAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="User registration using chrome">
+        <parameter name="broswer" value="chrome"></parameter>
+        <parameter name="userGrid" value="false"></parameter>
         <classes>
             <class name="createanaccounttests.CreateAnAccountTests">
                 <methods><include name="createValidAccount"/>
