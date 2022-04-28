@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class CreateAnAccountTests extends BaseTests {
-    private final Assertions assertions = new Assertions(driver);
+    private Assertions assertions = new Assertions(driver);
 
     @DataProvider(name = "CSV")
     public Object[][] getData() throws IOException, CsvException {
@@ -36,7 +36,7 @@ public class CreateAnAccountTests extends BaseTests {
                                    String city, String postalCode,
                                    String phoneNumber, String aliasAddress) throws IOException, ParseException {
         homePage.clickOnSighnInPage(getLocatorsFromJsonFile("sgininlocator"))
-                .enterEmail(getLocatorsFromJsonFile("emailtypelocator"), eMail)
+                .enterEmailToCreateNewAccount(getLocatorsFromJsonFile("emailtypelocator"), eMail)
                 .clickOnCreateAnAccount(getLocatorsFromJsonFile("clickoncreatelocator"))
                 .clickOnTitle(getLocatorsFromJsonFile("clickontitlelocator"))
                 .fillFirstName(getLocatorsFromJsonFile("customerfirstnamelocator"), fName)

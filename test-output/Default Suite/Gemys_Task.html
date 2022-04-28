@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 27 16:11:14 EET 2022</td>
+<td>Started on:</td><td>Wed Apr 27 18:45:36 EET 2022</td>
 </tr>
-<tr><td>Total time:</td><td>35 seconds (35653 ms)</td>
+<tr><td>Total time:</td><td>56 seconds (56902 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,22 +75,33 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='createanaccounttests.CreateAnAccountTests.createValidAccount()'><b>createValidAccount</b><br>Test class: createanaccounttests.CreateAnAccountTests<br>Parameters: hggtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  hena</td>
-<td><div><pre>java.lang.AssertionError: The account does&apos;t created successfully expected [My account - My Store] but found [Login - My Store]
-	at assertions.Assertions.assertOnPage(Assertions.java:14)
-	at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:57)
+<td title='createanaccounttests.CreateAnAccountTests.createValidAccount()'><b>createValidAccount</b><br>Test class: createanaccounttests.CreateAnAccountTests<br>Parameters: hggtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt, 11772, 01117745460,  hena</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: uniform-id_gender1 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-ISNDRDG&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Muham\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64604/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d2a0372d4fce21ab8907c2be785ec415
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at helper.Waits.explicitWaits(Waits.java:20)
+	at pages.CreateAnAccountPage.clickOnTitle(CreateAnAccountPage.java:12)
+	at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:41)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace666040998", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace666040998'><pre>java.lang.AssertionError: The account does&apos;t created successfully expected [My account - My Store] but found [Login - My Store]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at assertions.Assertions.assertOnPage(Assertions.java:14)
-	at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:57)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1296153103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1296153103'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: uniform-id_gender1 (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;DESKTOP-ISNDRDG&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Muham\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64604}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64604/devtoo..., se:cdpVersion: 100.0.4896.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d2a0372d4fce21ab8907c2be785ec415
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at helper.Waits.explicitWaits(Waits.java:20)
+	at pages.CreateAnAccountPage.clickOnTitle(CreateAnAccountPage.java:12)
+	at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:41)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,8 +130,8 @@ function toggleAllBoxes() {
 	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
 	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
 </pre></div></td>
-<td>19</td>
-<td>createanaccounttests.CreateAnAccountTests@7bab3f1a</td></tr>
+<td>29</td>
+<td>createanaccounttests.CreateAnAccountTests@437da279</td></tr>
 </table><p>
 </body>
 </html>

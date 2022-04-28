@@ -3,13 +3,14 @@ package helper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-
-public class Actions {
+public class MyActions {
     private WebDriver driver;
+    private Actions hoverOn;
     private Logs log = new Logs(driver);
-    public Actions(WebDriver driver) {
+    public MyActions(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -42,6 +43,17 @@ public class Actions {
                     driver.findElement(By.name(locator));
                     log.getLog("Get this locator: " + locator);
                 break;
+            case "linktext":
+                if(click==true) {
+                    System.out.println("ya ashry na linktext esmy: " + locator);
+                    driver.findElement(By.linkText(locator)).click();
+                    System.out.println("Page navigated: " + driver.getTitle());
+                    log.getLog("Get this locator: " + locator);
+                }
+                else
+                    driver.findElement(By.linkText(locator));
+                log.getLog("Get this locator: " + locator);
+                break;
             default:
                 System.out.println("Error in the locator");
         }
@@ -69,5 +81,10 @@ public class Actions {
         WebElement optionList = driver.findElement(By.id(webElement));
         Select selectOptions = new Select(optionList);
         selectOptions.selectByValue(optionValue);
+    }
+    public void makeHoverAction(String webElement) throws InterruptedException {
+        hoverOn = new Actions(driver);
+        hoverOn.moveToElement(driver.findElement(By.xpath(webElement))).perform();
+        Thread.sleep(3000);
     }
 }

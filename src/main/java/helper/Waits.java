@@ -22,6 +22,9 @@ public class Waits {
             case "name":
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(locatorPath)));
                 break;
+            case "linktext":
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(locatorPath)));
+                break;
             default:
                 System.out.println("Error in the locator");
         }

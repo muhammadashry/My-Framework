@@ -15,8 +15,8 @@
         <parameter name="broswer" value="chrome"></parameter>
         <parameter name="userGrid" value="false"></parameter>
         <classes>
-            <class name="createanaccounttests.CreateAnAccountTests">
-                <methods><include name="createValidAccount"/>
+            <class name="purchaseproduct.PurchaseProduct">
+                <methods><include name="purchaseProduct"/>
                 </methods>
             </class>
         </classes>

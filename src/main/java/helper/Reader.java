@@ -61,12 +61,13 @@ public class Reader {
 
     public Object[][] getExcelData(String filePath) throws IOException
     {
-        fis = new FileInputStream(filePath);
+        File srcFile = new File(filePath);
+        fis = new FileInputStream(srcFile);
         XSSFWorkbook wb = new XSSFWorkbook(fis);
         XSSFSheet sheet = wb.getSheetAt(0);
 
         int TotalNumberOfRows = (sheet.getLastRowNum()+1);
-        int TotalNumberOfCols = 4 ;
+        int TotalNumberOfCols = 2;
 
         String[][] arrayExcelData = new String[TotalNumberOfRows][TotalNumberOfCols] ;
 

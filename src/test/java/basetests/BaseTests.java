@@ -30,7 +30,7 @@ import java.util.Properties;
 public class BaseTests extends AbstractTestNGCucumberTests {
     protected WebDriver driver;
     protected HomePage homePage;
-    protected Reader dataReader, locatorReader, excelReader;
+    protected Reader locatorReader;
     protected Properties properties;
     protected CrossBrowserScript crossBrowserScript;
     private Logs log;
@@ -54,9 +54,7 @@ public class BaseTests extends AbstractTestNGCucumberTests {
         crossBrowserScript = new CrossBrowserScript(driver);
         driver = crossBrowserScript.setup(broswerName, properties.getProperty("browser.version"));
         homePage = new HomePage(driver);
-        dataReader = new Reader(driver);
         locatorReader = new Reader(driver);
-        excelReader = new Reader(driver);
         driver.get(properties.getProperty("site.automationpractice.url"));
         assertions.assertOnPage(driver, "My Store", "es7aa");
         log.getLog("Open browser");
