@@ -56,18 +56,18 @@ public class BaseTests {
         log.getLog("Open browser");
     }
 
-   /* @AfterMethod
+   @AfterMethod
     public void recoredFaliures(ITestResult result) throws IOException {
         if (ITestResult.FAILURE == result.getStatus()) {
-            Path dest = Paths.get("./failure-screanshots", result.getName() + ".png");
+            Path dest = Paths.get("D:\\ITI Study\\automation\\Gemy\\failure-screanshots", result.getName() + ".png");
             FileOutputStream out = new FileOutputStream(dest.toString());
             out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
         } else {
-            Path dest = Paths.get("./successful-screanshots", result.getName() + ".png");
+            Path dest = Paths.get("D:\\ITI Study\\automation\\Gemy\\successful-screanshots", result.getName() + ".png");
             FileOutputStream out = new FileOutputStream(dest.toString());
             out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
         }
-    }*/
+    }
 
     @AfterClass
     public void tearDown() {
