@@ -15,17 +15,18 @@ public class PurchaseProduct extends BaseTests {
     private Assertions assertions = new Assertions(driver);
 
     @DataProvider(name = "Excel")
-     public Object[][] getDataExcel() throws IOException {
-         Reader usersData = new Reader(driver);
-         return usersData.getExcelData(properties.getProperty("excel.data.path"));
-     }
+    public Object[][] getDataExcel() throws IOException {
+        Reader usersData = new Reader(driver);
+        return usersData.getExcelData(properties.getProperty("excel.data.path"));
+    }
+
     @Test(dataProvider = "Excel")
-    public void purchaseProduct(String email,String password) throws IOException, ParseException, InterruptedException {
-       NewUserHomePage newUserPage = homePage.clickOnSighnInPage(getLocatorsFromJsonFile("sgininlocator"))
-                .enterEmailToLogIn(getLocatorsFromJsonFile("loginemaillocator"),email)
-                .enterPasswordToLogIn(getLocatorsFromJsonFile("loginpasswordlocator"),password)
-                .clickOnSignIn(getLocatorsFromJsonFile("signinlocator"));
-       assertions.assertOnPage(driver,"My account - My Store","Please check your data");
-        newUserPage.clickOnBlousesCategory(getLocatorsFromJsonFile("blouseslocator"),getLocatorsFromJsonFile("hoveronwomen"));
+    public void purchaseProduct(String email, String password) throws IOException, ParseException, InterruptedException {
+        NewUserHomePage newUserPage = homePage.clickOnSighnInPage("sgininlocator")
+                .enterEmailToLogIn("loginemaillocator", email)
+                .enterPasswordToLogIn("loginpasswordlocator", password)
+                .clickOnSignIn("signinlocator");
+        assertions.assertOnPage(driver, "My account - My Store", "Please check your data");
+        newUserPage.clickOnBlousesCategory("blouseslocator", "hoveronwomen");
     }
 }

@@ -22,11 +22,6 @@ public class CreateAnAccountTests extends BaseTests {
         return usersData.getAllUsersCSVData(properties.getProperty("csv.data.path"));
     }
 
-    /* @DataProvider(name = "Excel")
-     public Object[][] getDataExcel() throws IOException {
-         Reader usersData = new Reader(driver);
-         return usersData.getExcelData(properties.getProperty("excel.data.path"));
-     }*/
     @Test(dataProvider = "CSV")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Create New Account")
@@ -35,26 +30,26 @@ public class CreateAnAccountTests extends BaseTests {
                                    String password, String address,
                                    String city, String postalCode,
                                    String phoneNumber, String aliasAddress) throws IOException, ParseException {
-        homePage.clickOnSighnInPage(getLocatorsFromJsonFile("sgininlocator"))
-                .enterEmailToCreateNewAccount(getLocatorsFromJsonFile("emailtypelocator"), eMail)
-                .clickOnCreateAnAccount(getLocatorsFromJsonFile("clickoncreatelocator"))
-                .clickOnTitle(getLocatorsFromJsonFile("clickontitlelocator"))
-                .fillFirstName(getLocatorsFromJsonFile("customerfirstnamelocator"), fName)
-                .fillLastName(getLocatorsFromJsonFile("customerlastnamelocator"), lName)
-                .fillPassword(getLocatorsFromJsonFile("passwordlocator"), password)
-                .choseDateOfBirth(getLocatorsFromJsonFile("birthdaydayslocator"), "5",
-                            getLocatorsFromJsonFile("birthdaymonthlocator"), "5",
-                            getLocatorsFromJsonFile("birthdayyearlocator"), "2020")
-                .fillCompanyName(getLocatorsFromJsonFile("companylocaotr"), companyName)
-                .fillAddress(getLocatorsFromJsonFile("addresslocator"), address)
-                .fillCity(getLocatorsFromJsonFile("citylocator"), city)
-                .choseState(getLocatorsFromJsonFile("statelocator"), "5")
-                .fillPostalCode(getLocatorsFromJsonFile("postalcodelocator"), postalCode)
-                .choseCountry(getLocatorsFromJsonFile("countrylocator"), "21")
-                .fillPhoneNumber(getLocatorsFromJsonFile("phonenumberlocator"), phoneNumber)
-                .fillAddressAlias(getLocatorsFromJsonFile("addressaliaslocator"), aliasAddress)
-                .clickOnRigister(getLocatorsFromJsonFile("registerlocator"));
-        assertions.assertOnPage(driver,"My account - My Store","The account does't created successfully");
+        homePage.clickOnSighnInPage("sgininlocator")
+                .enterEmailToCreateNewAccount("emailtypelocator", eMail)
+                .clickOnCreateAnAccount("clickoncreatelocator")
+                .clickOnTitle("clickontitlelocator")
+                .fillFirstName("customerfirstnamelocator", fName)
+                .fillLastName("customerlastnamelocator", lName)
+                .fillPassword("passwordlocator", password)
+                .choseDateOfBirth("birthdaydayslocator", "5",
+                        "birthdaymonthlocator", "5",
+                        "birthdayyearlocator", "2020")
+                .fillCompanyName("companylocaotr", companyName)
+                .fillAddress("addresslocator", address)
+                .fillCity("citylocator", city)
+                .choseState("statelocator", "5")
+                .fillPostalCode("postalcodelocator", postalCode)
+                .choseCountry("countrylocator", "21")
+                .fillPhoneNumber("phonenumberlocator", phoneNumber)
+                .fillAddressAlias("addressaliaslocator", aliasAddress)
+                .clickOnRigister("registerlocator");
+        assertions.assertOnPage(driver, "My account - My Store", "The account does't created successfully");
     }
 
 }

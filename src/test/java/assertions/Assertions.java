@@ -10,7 +10,8 @@ public class Assertions {
     public Assertions(WebDriver driver) {
         this.driver = driver;
     }
-    public void assertOnPage(WebDriver driver, String expected,String message){
-        Assert.assertEquals(driver.getTitle(),expected,message);
+
+    public void assertOnPage(WebDriver driver, String expected, String message) {
+        Assert.assertEquals(driver.getTitle(), expected, message);
     }
 }
