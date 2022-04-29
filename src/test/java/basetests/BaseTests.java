@@ -23,7 +23,7 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 
-public class BaseTests extends AbstractTestNGCucumberTests {
+public class BaseTests {
     protected WebDriver driver;
     protected HomePage homePage;
     protected Reader locatorReader;
@@ -36,7 +36,7 @@ public class BaseTests extends AbstractTestNGCucumberTests {
 
     @BeforeClass
     @Parameters({"browser", "userGrid"})
-    public void setUp(@Optional("chrome") String browserName, @Optional("false") Boolean useGrid) throws Exception {
+    public void setUp(@Optional("chrome") String browserName, @Optional("true") Boolean useGrid) throws Exception {
         if (useGrid == true) {
             caps = new DesiredCapabilities();
             caps.setBrowserName(browserName);
@@ -56,7 +56,7 @@ public class BaseTests extends AbstractTestNGCucumberTests {
         log.getLog("Open browser");
     }
 
-    @AfterMethod
+   /* @AfterMethod
     public void recoredFaliures(ITestResult result) throws IOException {
         if (ITestResult.FAILURE == result.getStatus()) {
             Path dest = Paths.get("./failure-screanshots", result.getName() + ".png");
@@ -67,7 +67,7 @@ public class BaseTests extends AbstractTestNGCucumberTests {
             FileOutputStream out = new FileOutputStream(dest.toString());
             out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
         }
-    }
+    }*/
 
     @AfterClass
     public void tearDown() {

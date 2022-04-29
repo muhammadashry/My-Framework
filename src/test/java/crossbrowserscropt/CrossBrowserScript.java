@@ -31,7 +31,7 @@ public class CrossBrowserScript {
             System.setProperty("webdriver.chrome.driver", version);
             driver = new EventFiringWebDriver(new ChromeDriver(options.addArguments("--headless")));
             return driver;
-        } else if (browser.equalsIgnoreCase("Edge")) {
+        } else if (browser.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         } else {

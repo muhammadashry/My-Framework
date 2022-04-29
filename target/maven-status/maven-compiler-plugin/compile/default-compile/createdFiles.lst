@@ -1,8 +1,9 @@
 helper\Waits.class
 helper\Reader.class
+pages\NewUserHomePage.class
 pages\HomePage.class
 pages\SignInPage.class
-helper\Actions.class
 pages\PageBase.class
+helper\MyActions.class
 pages\CreateAnAccountPage.class
 helper\Logs.class

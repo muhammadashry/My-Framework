@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
-  <parameter name="broswer" value="firefox"/>
-  <test thread-count="5" verbose="0" name="D:/ITI Study/automation/Gemy(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]" parallel="tests">
+  <test thread-count="5" verbose="0" name="User registration using firefox(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="userGrid" value="true"/>
     <classes>
       <class name="createanaccounttests.CreateAnAccountTests">
         <methods>
           <include name="setUpClass"/>
           <include name="tearDown"/>
           <include name="recoredFaliures"/>
-          <include name="tearDownClass"/>
           <include name="setUp"/>
+          <include name="tearDownClass"/>
           <include name="createValidAccount" invocation-numbers="0"/>
         </methods>
       </class> <!-- createanaccounttests.CreateAnAccountTests -->
     </classes>
-  </test> <!-- D:/ITI Study/automation/Gemy(failed) -->
+  </test> <!-- User registration using firefox(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

@@ -1,8 +1,9 @@
-D:\ITI Study\automation\Gemy\src\main\java\helper\Actions.java
 D:\ITI Study\automation\Gemy\src\main\java\pages\CreateAnAccountPage.java
 D:\ITI Study\automation\Gemy\src\main\java\helper\Logs.java
 D:\ITI Study\automation\Gemy\src\main\java\helper\Waits.java
+D:\ITI Study\automation\Gemy\src\main\java\pages\NewUserHomePage.java
 D:\ITI Study\automation\Gemy\src\main\java\pages\SignInPage.java
 D:\ITI Study\automation\Gemy\src\main\java\helper\Reader.java
+D:\ITI Study\automation\Gemy\src\main\java\helper\MyActions.java
 D:\ITI Study\automation\Gemy\src\main\java\pages\HomePage.java
 D:\ITI Study\automation\Gemy\src\main\java\pages\PageBase.java

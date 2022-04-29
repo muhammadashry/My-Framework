@@ -26,7 +26,7 @@ public class PurchaseProduct extends BaseTests {
                 .enterEmailToLogIn("loginemaillocator", email)
                 .enterPasswordToLogIn("loginpasswordlocator", password)
                 .clickOnSignIn("signinlocator");
-        assertions.assertOnPage(driver, "My account - My Store", "Please check your data");
+        //assertions.assertOnPage(driver, "My account - My Store", "Please check your data");
         newUserPage.clickOnBlousesCategory("blouseslocator", "hoveronwomen");
     }
 }
