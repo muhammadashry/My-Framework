@@ -25,9 +25,10 @@ public class SignInPage extends PageBase {
         return this;
     }
 
-    public SignInPage enterPasswordToLogIn(String id, String password) throws IOException, ParseException {
+    public SignInPage enterPasswordToLogIn(String id, String password) throws IOException, ParseException, InterruptedException {
         action.makeAction("id", getLocatorsFromJsonFile(id), password);
         log.getLog("Enter your Email");
+        Thread.sleep(5000);
         return this;
     }
 
@@ -40,7 +41,7 @@ public class SignInPage extends PageBase {
     }
 
     public NewUserHomePage clickOnSignIn(String id) throws IOException, ParseException {
-        timeToWait.explicitWaits(driver, 10, getLocatorsFromJsonFile(id), "id");
+        timeToWait.explicitWaits(driver, 20, getLocatorsFromJsonFile(id), "id");
         action.makeAction("id", getLocatorsFromJsonFile(id), true);
         log.getLog("Click on signin");
         return new NewUserHomePage(driver);

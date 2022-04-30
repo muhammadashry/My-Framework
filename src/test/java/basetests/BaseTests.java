@@ -4,7 +4,6 @@ import assertions.Assertions;
 import crossbrowserscropt.CrossBrowserScript;
 import helper.Logs;
 import helper.Reader;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -56,7 +55,7 @@ public class BaseTests {
         log.getLog("Open browser");
     }
 
-   @AfterMethod
+    @AfterMethod
     public void recoredFaliures(ITestResult result) throws IOException {
         if (ITestResult.FAILURE == result.getStatus()) {
             Path dest = Paths.get("D:\\ITI Study\\automation\\Gemy\\failure-screanshots", result.getName() + ".png");
