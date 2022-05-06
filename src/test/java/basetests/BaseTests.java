@@ -4,6 +4,7 @@ import assertions.Assertions;
 import crossbrowserscropt.CrossBrowserScript;
 import helper.Logs;
 import helper.Reader;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,8 +23,8 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 
-public class BaseTests {
-    protected WebDriver driver;
+public class BaseTests extends AbstractTestNGCucumberTests {
+    protected static WebDriver driver;
     protected HomePage homePage;
     protected Reader locatorReader;
     protected Properties properties;
@@ -33,9 +34,9 @@ public class BaseTests {
     private Logs log;
     private Assertions assertions;
 
-    @BeforeClass
+    @BeforeSuite
     @Parameters({"browser", "userGrid"})
-    public void setUp(@Optional("chrome") String browserName, @Optional("true") Boolean useGrid) throws Exception {
+    public void setUp(@Optional("chrome") String browserName, @Optional("false") Boolean useGrid) throws Exception {
         if (useGrid == true) {
             caps = new DesiredCapabilities();
             caps.setBrowserName(browserName);
@@ -68,7 +69,7 @@ public class BaseTests {
         }
     }
 
-    @AfterClass
+    @AfterSuite
     public void tearDown() {
         driver.quit();
         log.getLog("Tear Down");

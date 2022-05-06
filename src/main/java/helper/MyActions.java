@@ -43,7 +43,6 @@ public class MyActions {
                 break;
             case "linktext":
                 if (click == true) {
-                    System.out.println("ya ashry na linktext esmy: " + locator);
                     driver.findElement(By.linkText(locator)).click();
                     System.out.println("Page navigated: " + driver.getTitle());
                     log.getLog("Get this locator: " + locator);
