@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class CreateAnAccountTests extends BaseTests {
-    private Assertions assertions = new Assertions(driver);
+    private final Assertions assertions = new Assertions(driver);
 
     @DataProvider(name = "CSV")
     public Object[][] getData() throws IOException, CsvException {

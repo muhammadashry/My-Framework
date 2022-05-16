@@ -1,5 +1,6 @@
 package pages;
 
+import com.epam.healenium.SelfHealingDriver;
 import helper.Logs;
 import helper.MyActions;
 import helper.Reader;

@@ -1,8 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 60.109 s <<< FAILURE! - in TestSuite
-createanaccounttests.CreateAnAccountTests.createValidAccount[hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  hena](1)  Time elapsed: 21.561 s  <<< FAILURE!
-java.lang.AssertionError: The account does't created successfully expected [My account - My Store] but found [Login - My Store]
-	at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:52)
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 53.696 s <<< FAILURE! - in TestSuite
+purchaseproduct.PurchaseProduct.purchaseProduct[ashrytest@hotmail.com, 1.23456789E8](1)  Time elapsed: 12.741 s  <<< FAILURE!
+java.lang.AssertionError: Please check your data expected [My account - My Store] but found [Login - My Store]
+	at purchaseproduct.PurchaseProduct.purchaseProduct(PurchaseProduct.java:29)
+
+purchaseproduct.PurchaseProduct.recoredFaliures[[TestResult name=purchaseProduct status=FAILURE method=PurchaseProduct.purchaseProduct(java.lang.String,java.lang.String)[pri:0, instance:purchaseproduct.PurchaseProduct@6a6cb05c] output={null}]](0)  Time elapsed: 12.754 s  <<< FAILURE!
+java.lang.ClassCastException: com.sun.proxy.$Proxy19 cannot be cast to org.openqa.selenium.TakesScreenshot
 

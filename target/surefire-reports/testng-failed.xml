@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]" parallel="tests">
+  <parameter name="userGrid" value="true"/>
   <test thread-count="5" verbose="0" name="User registration using firefox(failed)" parallel="tests">
     <parameter name="browser" value="firefox"/>
-    <parameter name="userGrid" value="true"/>
     <classes>
       <class name="createanaccounttests.CreateAnAccountTests">
         <methods>
           <include name="setUpClass"/>
           <include name="tearDown"/>
           <include name="recoredFaliures"/>
-          <include name="setUp"/>
           <include name="tearDownClass"/>
-          <include name="createValidAccount" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="createValidAccount"/>
         </methods>
       </class> <!-- createanaccounttests.CreateAnAccountTests -->
     </classes>
   </test> <!-- User registration using firefox(failed) -->
+  <test thread-count="5" verbose="0" name="User registration using chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="purchaseproduct.PurchaseProduct">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDown"/>
+          <include name="recoredFaliures"/>
+          <include name="tearDownClass"/>
+          <include name="purchaseProduct" invocation-numbers="0"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- purchaseproduct.PurchaseProduct -->
+    </classes>
+  </test> <!-- User registration using chrome(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

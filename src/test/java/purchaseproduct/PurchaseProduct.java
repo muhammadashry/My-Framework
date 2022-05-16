@@ -2,6 +2,7 @@ package purchaseproduct;
 
 import assertions.Assertions;
 import basetests.BaseTests;
+import com.epam.healenium.annotation.DisableHealing;
 import helper.Reader;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.DataProvider;
@@ -19,7 +20,6 @@ public class PurchaseProduct extends BaseTests {
         Reader usersData = new Reader(driver);
         return usersData.getExcelData(properties.getProperty("excel.data.path"));
     }
-
     @Test(dataProvider = "Excel")
     public void purchaseProduct(String email, String password) throws IOException, ParseException, InterruptedException {
         NewUserHomePage newUserPage = homePage.clickOnSighnInPage("sgininlocator")

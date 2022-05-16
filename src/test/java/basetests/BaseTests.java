@@ -1,13 +1,13 @@
 package basetests;
 
 import assertions.Assertions;
+import com.epam.healenium.SelfHealingDriver;
 import crossbrowserscropt.CrossBrowserScript;
 import helper.Logs;
 import helper.Reader;
+import helper.ScreenShots;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
@@ -15,16 +15,12 @@ import org.testng.annotations.*;
 import pages.HomePage;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Properties;
 
-
 public class BaseTests extends AbstractTestNGCucumberTests {
-    protected static WebDriver driver;
+    protected WebDriver driver;
     protected HomePage homePage;
     protected Reader locatorReader;
     protected Properties properties;
@@ -36,7 +32,7 @@ public class BaseTests extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     @Parameters({"browser", "userGrid"})
-    public void setUp(@Optional("chrome") String browserName, @Optional("false") Boolean useGrid) throws Exception {
+    public void setUp(@Optional("chrome") String browserName, @Optional("true") Boolean useGrid) throws Exception {
         if (useGrid == true) {
             caps = new DesiredCapabilities();
             caps.setBrowserName(browserName);
@@ -58,17 +54,8 @@ public class BaseTests extends AbstractTestNGCucumberTests {
 
     @AfterMethod
     public void recoredFaliures(ITestResult result) throws IOException {
-        if (ITestResult.FAILURE == result.getStatus()) {
-            Path dest = Paths.get("D:\\ITI Study\\automation\\Gemy\\failure-screanshots", result.getName() + ".png");
-            FileOutputStream out = new FileOutputStream(dest.toString());
-            out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
-        } else {
-            Path dest = Paths.get("D:\\ITI Study\\automation\\Gemy\\successful-screanshots", result.getName() + ".png");
-            FileOutputStream out = new FileOutputStream(dest.toString());
-            out.write(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES));
+            ScreenShots.takeScreenShot((SelfHealingDriver) driver,result);
         }
-    }
-
     @AfterSuite
     public void tearDown() {
         driver.quit();

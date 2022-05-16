@@ -72,7 +72,7 @@ public class Reader {
         XSSFSheet sheet = wb.getSheetAt(0);
 
         int TotalNumberOfRows = (sheet.getLastRowNum() + 1);
-        int TotalNumberOfCols = 2;
+        int TotalNumberOfCols = sheet.getRow(0).getLastCellNum();
 
         String[][] arrayExcelData = new String[TotalNumberOfRows][TotalNumberOfCols];
 
@@ -82,7 +82,6 @@ public class Reader {
                 arrayExcelData[i][j] = row.getCell(j).toString();
             }
         }
-        System.out.println(arrayExcelData[0][0]);
         wb.close();
         return arrayExcelData;
     }

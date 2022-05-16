@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,24 +104,24 @@
                     <div class="method-list-content failed suite-All_Test_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="createanaccounttests.CreateAnAccountTests" hash-for-method="createValidAccount(hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  h...)">createValidAccount(hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  h...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="purchaseproduct.PurchaseProduct" hash-for-method="purchaseProduct(ashrytest@hotmail.com, 1.23456789E8)">purchaseProduct(ashrytest@hotmail.com, 1.23456789E8)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-All_Test_Suite -->
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods passed suite-All_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-All_Test_Suite -->
-                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods passed suite-All_Test_Suite"> (show)</a> <!-- show-methods passed suite-All_Test_Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-All_Test_Suite" class="hide-methods skipped suite-All_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-All_Test_Suite -->
+                      <a href="#" panel-name="suite-All_Test_Suite" class="show-methods skipped suite-All_Test_Suite"> (show)</a> <!-- show-methods skipped suite-All_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-All_Test_Suite">
+                    <div class="method-list-content skipped suite-All_Test_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="purchaseproduct.PurchaseProduct" hash-for-method="purchaseProduct(Muhammadashry@hotmail.com, Dntbelieve_me1)">purchaseProduct(Muhammadashry@hotmail.com, Dntbelieve_me1)</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-All_Test_Suite" title="createanaccounttests.CreateAnAccountTests" hash-for-method="createValidAccount">createValidAccount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-All_Test_Suite -->
+                    </div> <!-- method-list-content skipped suite-All_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,18 +136,18 @@
           <div class="suite-All_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">createanaccounttests.CreateAnAccountTests</span>
+              <span class="class-name">purchaseproduct.PurchaseProduct</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createValidAccount(hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  h...)">
-                  </a> <!-- createValidAccount(hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  h...) -->
-                  <span class="method-name">createValidAccount</span>
-                  <span class="parameters">(hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  hena)</span>
-                  <div class="stack-trace">java.lang.AssertionError: The account does&apos;t created successfully expected [My account - My Store] but found [Login - My Store]
+                  <a name="purchaseProduct(ashrytest@hotmail.com, 1.23456789E8)">
+                  </a> <!-- purchaseProduct(ashrytest@hotmail.com, 1.23456789E8) -->
+                  <span class="method-name">purchaseProduct</span>
+                  <span class="parameters">(ashrytest@hotmail.com, 1.23456789E8)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Please check your data expected [My account - My Store] but found [Login - My Store]
 	at assertions.Assertions.assertOnPage(Assertions.java:15)
-	at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:52)
+	at purchaseproduct.PurchaseProduct.purchaseProduct(PurchaseProduct.java:29)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
@@ -159,22 +159,32 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-All_Test_Suite-class-failed -->
-          <div class="suite-All_Test_Suite-class-passed">
+          <div class="suite-All_Test_Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">purchaseproduct.PurchaseProduct</span>
+              <img src="skipped.png"/>
+              <span class="class-name">createanaccounttests.CreateAnAccountTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="purchaseProduct(Muhammadashry@hotmail.com, Dntbelieve_me1)">
-                  </a> <!-- purchaseProduct(Muhammadashry@hotmail.com, Dntbelieve_me1) -->
-                  <span class="method-name">purchaseProduct</span>
-                  <span class="parameters">(Muhammadashry@hotmail.com, Dntbelieve_me1)</span>
+                  <a name="createValidAccount">
+                  </a> <!-- createValidAccount -->
+                  <span class="method-name">createValidAccount</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NullPointerException
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at createanaccounttests.CreateAnAccountTests.getData(CreateAnAccountTests.java:22)
+	... 20 more
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-All_Test_Suite-class-passed -->
+          </div> <!-- suite-All_Test_Suite-class-skipped -->
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -185,9 +195,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;All Test Suite&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;User registration using firefox&quot; parallel=&quot;tests&quot;&gt;
+  &lt;parameter name=&quot;userGrid&quot; value=&quot;true&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;User registration using firefox&quot; parallel=&quot;tests&quot; preserve-order=&quot;false&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
-    &lt;parameter name=&quot;userGrid&quot; value=&quot;true&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;createanaccounttests.CreateAnAccountTests&quot;&gt;
         &lt;methods&gt;
@@ -196,9 +206,8 @@
       &lt;/class&gt; &lt;!-- createanaccounttests.CreateAnAccountTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- User registration using firefox --&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;User registration using chrome&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;User registration using chrome&quot; parallel=&quot;tests&quot; preserve-order=&quot;false&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;userGrid&quot; value=&quot;ture&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;purchaseproduct.PurchaseProduct&quot;&gt;
         &lt;methods&gt;
@@ -251,16 +260,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'purchaseProduct')
 data.setCell(0, 2, 'purchaseproduct.PurchaseProduct')
-data.setCell(0, 3, 32341);
+data.setCell(0, 3, 12737);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createValidAccount')
 data.setCell(1, 2, 'createanaccounttests.CreateAnAccountTests')
-data.setCell(1, 3, 22211);
+data.setCell(1, 3, 0);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -300,81 +309,55 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">purchaseproduct.PurchaseProduct</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp(chrome, true)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">createanaccounttests.CreateAnAccountTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@443118b0)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5b22b970)</span>
+                <span class="method-start">34931 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">purchaseproduct.PurchaseProduct</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@765d7657)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@22d1886d)</span>
+                <span class="method-start">34931 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">createanaccounttests.CreateAnAccountTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp(firefox, true)</span>
-                <span class="method-start">281 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">35553 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">purchaseproduct.PurchaseProduct</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp(chrome, false)</span>
-                <span class="method-start">281 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">purchaseProduct(Muhammadashry@hotmail.com, Dntbelieve_me1)</span>
-                <span class="method-start">21946 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">createanaccounttests.CreateAnAccountTests</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">createValidAccount(hgggfhgtht@live.com, Mohamed, Ashry, Ashriaans, 123456789, Ain-Shams, Egypt,  11772, 01117745460,  h...)</span>
-                <span class="method-start">33931 ms</span>
+                <span class="method-name">purchaseProduct(ashrytest@hotmail.com, 1.23456789E8)</span>
+                <span class="method-start">37401 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">purchaseproduct.PurchaseProduct</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
-                <span class="method-name">recoredFaliures([TestResult name=purchaseProduct status=SUCCESS method=PurchaseProduct.purchaseProduct(java.lang.Str...)</span>
-                <span class="method-start">54447 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">recoredFaliures([TestResult name=purchaseProduct status=FAILURE method=PurchaseProduct.purchaseProduct(java.lang.Str...)</span>
+                <span class="method-start">50153 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">54883 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">createanaccounttests.CreateAnAccountTests</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">recoredFaliures([TestResult name=createValidAccount status=FAILURE method=CreateAnAccountTests.createValidAccount(ja...)</span>
-                <span class="method-start">56194 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">56414 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">purchaseproduct.PurchaseProduct</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">56880 ms</span>
+                <span class="method-start">50168 ms</span>
               </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">createanaccounttests.CreateAnAccountTests</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">58278 ms</span>
-              </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">50350 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,5 +1,8 @@
 basetests\BaseTests.class
-createanaccounttests\CreateAnAccountTests.class
-purchaseproduct\PurchaseProduct.class
+steps\LoginSteps.class
 assertions\Assertions.class
 crossbrowserscropt\CrossBrowserScript.class
+apis\FirstTry.class
+createanaccounttests\CreateAnAccountTests.class
+purchaseproduct\PurchaseProduct.class
+runner\TestRunner.class
