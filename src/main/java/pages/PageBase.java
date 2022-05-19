@@ -1,6 +1,5 @@
 package pages;
 
-import com.epam.healenium.SelfHealingDriver;
 import helper.Logs;
 import helper.MyActions;
 import helper.Reader;
@@ -18,21 +17,21 @@ public class PageBase {
     protected MyActions action;
     protected Logs log;
     protected Reader reader;
-    protected Properties propertie;
+    protected Properties property;
 
     public PageBase(WebDriver driver) throws IOException {
         this.driver = driver;
-        timeToWait = new Waits(driver);
+        timeToWait = new Waits();
         action = new MyActions(driver);
-        log = new Logs(driver);
-        reader = new Reader(driver);
+        log = new Logs();
+        reader = new Reader();
         FileInputStream objFile = new FileInputStream("D:\\ITI Study\\automation\\Gemy\\src\\main\\resources\\config.properties");
-        propertie = new Properties();
-        propertie.load(objFile);
+        property = new Properties();
+        property.load(objFile);
     }
 
     public String getLocatorsFromJsonFile(String keyword) throws IOException, ParseException {
 
-        return reader.getLocatorsFromJsonFile(keyword, propertie.getProperty("json.locator.path"));
+        return reader.getLocatorsFromJsonFile(keyword, property.getProperty("json.locator.path"));
     }
 }

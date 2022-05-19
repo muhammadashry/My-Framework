@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class SignInPage extends PageBase {
 
-    public SignInPage(WebDriver driver) throws IOException {
+    public SignInPage(WebDriver driver) throws Exception {
         super(driver);
     }
 
@@ -33,7 +33,7 @@ public class SignInPage extends PageBase {
         return this;
     }
 
-    public CreateAnAccountPage clickOnCreateAnAccount(String id) throws IOException, ParseException {
+    public CreateAnAccountPage clickOnCreateAnAccount(String id) throws Exception {
         timeToWait.explicitWaits(driver, 10, getLocatorsFromJsonFile(id), "id");
         action.makeAction("id", getLocatorsFromJsonFile(id), true);
         log.getLog("Click on clickOnCreateAnAccount");
@@ -41,7 +41,7 @@ public class SignInPage extends PageBase {
 
     }
 
-    public NewUserHomePage clickOnSignIn(String id) throws IOException, ParseException {
+    public NewUserHomePage clickOnSignIn(String id) throws Exception {
         timeToWait.explicitWaits(driver, 20, getLocatorsFromJsonFile(id), "id");
         action.makeAction("id", getLocatorsFromJsonFile(id), true);
         log.getLog("Click on signin");

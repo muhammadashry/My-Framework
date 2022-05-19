@@ -1,4 +1,4 @@
-package crossbrowserscropt;
+package helper;
 
 import com.epam.healenium.SelfHealingDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -7,19 +7,29 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-public class CrossBrowserScript {
+import java.net.URL;
+
+public class CrossBrowser {
     protected SelfHealingDriver driver;
     protected WebDriver delegate;
-    // handel el options
-    public CrossBrowserScript(WebDriver driver) {
+    protected String Node = "http://localhost:4444/wd/hub";
+    protected DesiredCapabilities caps;
 
+    public CrossBrowser(WebDriver driver) {
         this.delegate = driver;
     }
 
-    public SelfHealingDriver setup(String browser, String version) throws Exception {
-        if (browser.equalsIgnoreCase("firefox")) {
+    public SelfHealingDriver setup(String browser, String version,Boolean useGrid) throws Exception {
+        if (useGrid == true) {
+            caps = new DesiredCapabilities();
+            caps.setBrowserName(browser);
+            delegate = new RemoteWebDriver(new URL(Node), caps);
+        }
+         if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             delegate = new FirefoxDriver();
             driver = SelfHealingDriver.create(delegate);

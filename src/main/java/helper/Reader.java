@@ -27,9 +27,6 @@ public class Reader {
     private WebDriver driver;
     private FileInputStream fis = null;
 
-    public Reader(WebDriver driver) {
-        this.driver = driver;
-    }
 
     public Object[][] getAllUsersCSVData(String CSV_PATH) throws IOException, CsvException {
         userData = new ArrayList<>();

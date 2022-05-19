@@ -2,6 +2,7 @@ package createanaccounttests;
 
 import assertions.Assertions;
 import basetests.BaseTests;
+import com.epam.healenium.annotation.DisableHealing;
 import com.opencsv.exceptions.CsvException;
 import helper.Reader;
 import io.qameta.allure.Description;
@@ -18,18 +19,19 @@ public class CreateAnAccountTests extends BaseTests {
 
     @DataProvider(name = "CSV")
     public Object[][] getData() throws IOException, CsvException {
-        Reader usersData = new Reader(driver);
+        Reader usersData = new Reader();
         return usersData.getAllUsersCSVData(properties.getProperty("csv.data.path"));
     }
 
     @Test(dataProvider = "CSV")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Create New Account")
+    @DisableHealing
     public void createValidAccount(String eMail, String fName,
                                    String lName, String companyName,
                                    String password, String address,
                                    String city, String postalCode,
-                                   String phoneNumber, String aliasAddress) throws IOException, ParseException {
+                                   String phoneNumber, String aliasAddress) throws Exception {
         homePage.clickOnSighnInPage("sgininlocator")
                 .enterEmailToCreateNewAccount("emailtypelocator", eMail)
                 .clickOnCreateAnAccount("clickoncreatelocator")

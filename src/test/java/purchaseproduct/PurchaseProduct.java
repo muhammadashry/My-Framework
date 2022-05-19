@@ -17,11 +17,11 @@ public class PurchaseProduct extends BaseTests {
 
     @DataProvider(name = "Excel")
     public Object[][] getDataExcel() throws IOException {
-        Reader usersData = new Reader(driver);
+        Reader usersData = new Reader();
         return usersData.getExcelData(properties.getProperty("excel.data.path"));
     }
     @Test(dataProvider = "Excel")
-    public void purchaseProduct(String email, String password) throws IOException, ParseException, InterruptedException {
+    public void purchaseProduct(String email, String password) throws Exception {
         NewUserHomePage newUserPage = homePage.clickOnSighnInPage("sgininlocator")
                 .enterEmailToLogIn("loginemaillocator", email)
                 .enterPasswordToLogIn("loginpasswordlocator", password)

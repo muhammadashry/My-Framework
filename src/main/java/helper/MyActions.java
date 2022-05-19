@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 public class MyActions {
     private WebDriver driver;
     private Actions hoverOn;
-    private Logs log = new Logs(driver);
+    private Logs log = new Logs();
 
     public MyActions(WebDriver driver) {
         this.driver = driver;
@@ -21,34 +21,26 @@ public class MyActions {
                 if (click == true) {
                     driver.findElement(By.xpath(locator)).click();
                     log.getLog("Get this locator: " + locator);
-                } else
-                    driver.findElement(By.xpath(locator));
-                log.getLog("Get this locator: " + locator);
+                }
                 break;
             case "id":
                 if (click == true) {
                     driver.findElement(By.id(locator)).click();
                     log.getLog("Get this locator: " + locator);
-                } else
-                    driver.findElement(By.id(locator));
-                log.getLog("Get this locator: " + locator);
+                }
                 break;
             case "name":
                 if (click == true) {
                     driver.findElement(By.name(locator)).click();
                     log.getLog("Get this locator: " + locator);
-                } else
-                    driver.findElement(By.name(locator));
-                log.getLog("Get this locator: " + locator);
+                }
                 break;
             case "linktext":
                 if (click == true) {
                     driver.findElement(By.linkText(locator)).click();
                     System.out.println("Page navigated: " + driver.getTitle());
                     log.getLog("Get this locator: " + locator);
-                } else
-                    driver.findElement(By.linkText(locator));
-                log.getLog("Get this locator: " + locator);
+                }
                 break;
             default:
                 System.out.println("Error in the locator");

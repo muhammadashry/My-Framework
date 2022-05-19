@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 
 public class NewUserHomePage extends PageBase {
-    public NewUserHomePage(WebDriver driver) throws IOException {
+    public NewUserHomePage(WebDriver driver) throws Exception {
         super(driver);
     }
 

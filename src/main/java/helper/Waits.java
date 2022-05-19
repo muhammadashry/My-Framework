@@ -6,11 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Waits {
-    private WebDriver driver;
-
-    public Waits(WebDriver driver) {
-        this.driver = driver;
-    }
 
     public void explicitWaits(WebDriver driver, int seconds, String locatorPath, String by) {
         WebDriverWait wait = new WebDriverWait(driver, seconds);

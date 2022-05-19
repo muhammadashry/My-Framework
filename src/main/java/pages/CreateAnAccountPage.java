@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class CreateAnAccountPage extends PageBase {
 
-    public CreateAnAccountPage(WebDriver driver) throws IOException {
+    public CreateAnAccountPage(WebDriver driver) throws Exception {
         super(driver);
     }
 
