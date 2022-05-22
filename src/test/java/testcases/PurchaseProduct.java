@@ -1,10 +1,9 @@
-package purchaseproduct;
+package testcases;
 
-import assertions.Assertions;
 import basetests.BaseTests;
-import com.epam.healenium.annotation.DisableHealing;
+import helper.Assertions;
 import helper.Reader;
-import org.json.simple.parser.ParseException;
+import helper.RetryFailedTests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.NewUserHomePage;
@@ -20,7 +19,8 @@ public class PurchaseProduct extends BaseTests {
         Reader usersData = new Reader();
         return usersData.getExcelData(properties.getProperty("excel.data.path"));
     }
-    @Test(dataProvider = "Excel")
+
+    @Test(dataProvider = "Excel", retryAnalyzer = RetryFailedTests.class)
     public void purchaseProduct(String email, String password) throws Exception {
         NewUserHomePage newUserPage = homePage.clickOnSighnInPage("sgininlocator")
                 .enterEmailToLogIn("loginemaillocator", email)

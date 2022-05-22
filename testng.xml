@@ -5,18 +5,20 @@
         <parameter name="browser" value="firefox"></parameter>
         <parameter name="userGrid" value="false"></parameter>
         <classes>
-            <class name="purchaseproduct.PurchaseProduct">
-                <methods><include name="purchaseProduct"/>
+            <class name="testcases.PurchaseProduct">
+                <methods>
+                    <include name="purchaseProduct"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <parameter name="browser" value="chrome"></parameter>
-    <parameter name="userGrid" value="false"></parameter>
     <test name="User registration using chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="userGrid" value="false"></parameter>
         <classes>
-            <class name="purchaseproduct.PurchaseProduct">
-                <methods><include name="purchaseProduct"/>
+            <class name="testcases.PurchaseProduct">
+                <methods>
+                    <include name="purchaseProduct"/>
                 </methods>
             </class>
         </classes>

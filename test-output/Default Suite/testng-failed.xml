@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Gemys_Task(failed)">
     <classes>
-      <class name="createanaccounttests.CreateAnAccountTests">
+      <class name="testcases.CreateAnAccountTests">
         <methods>
           <include name="setUpClass"/>
           <include name="tearDown"/>
@@ -12,7 +12,7 @@
           <include name="setUp"/>
           <include name="createValidAccount" invocation-numbers="0"/>
         </methods>
-      </class> <!-- createanaccounttests.CreateAnAccountTests -->
+      </class> <!-- testcases.CreateAnAccountTests -->
     </classes>
   </test> <!-- Gemys_Task(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

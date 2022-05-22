@@ -1,7 +1,7 @@
 package steps;
 
-import assertions.Assertions;
 import basetests.BaseTests;
+import helper.Assertions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

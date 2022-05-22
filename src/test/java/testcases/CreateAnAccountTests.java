@@ -1,14 +1,13 @@
-package createanaccounttests;
+package testcases;
 
-import assertions.Assertions;
 import basetests.BaseTests;
 import com.epam.healenium.annotation.DisableHealing;
 import com.opencsv.exceptions.CsvException;
+import helper.Assertions;
 import helper.Reader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import org.json.simple.parser.ParseException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

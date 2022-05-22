@@ -1,6 +1,5 @@
 package pages;
 
-import com.epam.healenium.SelfHealingDriver;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
 
@@ -93,7 +92,7 @@ public class CreateAnAccountPage extends PageBase {
     public CreateAnAccountPage clickOnRigister(String rigisterId) throws IOException, ParseException {
         log.getLog("Click on clickOnRigister method");
         action.makeAction("id", getLocatorsFromJsonFile(rigisterId), true);
-        timeToWait.explicitWaits(driver,15,"//h1[@class='page-heading']","xpath");
+        timeToWait.explicitWaits(driver, 15, "//h1[@class='page-heading']", "xpath");
         return this;
     }
 }

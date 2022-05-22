@@ -6,8 +6,8 @@
     <groups>
     </groups>
     <test started-at="2022-04-29T02:13:09 EET" name="Gemys_Task" finished-at="2022-04-29T02:13:29 EET" duration-ms="19353">
-      <class name="createanaccounttests.CreateAnAccountTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:09 EET" name="setUpClass" finished-at="2022-04-29T02:13:10 EET" duration-ms="300" status="PASS">
+      <class name="testcases.CreateAnAccountTests">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:09 EET" name="setUpClass" finished-at="2022-04-29T02:13:10 EET" duration-ms="300" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.Boolean)[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:10 EET" name="setUp" finished-at="2022-04-29T02:13:18 EET" duration-ms="8444" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.Boolean)[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:10 EET" name="setUp" finished-at="2022-04-29T02:13:18 EET" duration-ms="8444" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,7 +34,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:18 EET" name="createValidAccount" data-provider="CSV" finished-at="2022-04-29T02:13:27 EET" duration-ms="8514" status="FAIL">
+        <test-method signature="createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:18 EET" name="createValidAccount" data-provider="CSV" finished-at="2022-04-29T02:13:27 EET" duration-ms="8514" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -98,8 +98,8 @@ at org.testng.Assert.failNotEquals(Assert.java:1413)
 at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 at org.testng.Assert.assertEquals(Assert.java:131)
 at org.testng.Assert.assertEquals(Assert.java:655)
-at assertions.Assertions.assertOnPage(Assertions.java:14)
-at createanaccounttests.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:57)
+at helper.Assertions.assertOnPage(Assertions.java:14)
+at testcases.CreateAnAccountTests.createValidAccount(CreateAnAccountTests.java:57)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -133,26 +133,26 @@ at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createValidAccount -->
-        <test-method is-config="true" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:27 EET" name="recoredFaliures" finished-at="2022-04-29T02:13:27 EET" duration-ms="255" status="PASS">
+        <test-method is-config="true" signature="recoredFaliures(org.testng.ITestResult)[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:27 EET" name="recoredFaliures" finished-at="2022-04-29T02:13:27 EET" duration-ms="255" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createValidAccount status=FAILURE method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a] output={null}]]]>
+                <![CDATA[[TestResult name=createValidAccount status=FAILURE method=CreateAnAccountTests.createValidAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recoredFaliures -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:27 EET" name="tearDown" finished-at="2022-04-29T02:13:29 EET" duration-ms="1609" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:27 EET" name="tearDown" finished-at="2022-04-29T02:13:29 EET" duration-ms="1609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:createanaccounttests.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:29 EET" name="tearDownClass" finished-at="2022-04-29T02:13:29 EET" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testcases.CreateAnAccountTests@2c1b194a]" started-at="2022-04-29T02:13:29 EET" name="tearDownClass" finished-at="2022-04-29T02:13:29 EET" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- createanaccounttests.CreateAnAccountTests -->
+      </class> <!-- testcases.CreateAnAccountTests -->
     </test> <!-- Gemys_Task -->
   </suite> <!-- Default Suite -->
 </testng-results>

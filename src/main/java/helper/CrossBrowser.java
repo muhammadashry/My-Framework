@@ -23,33 +23,35 @@ public class CrossBrowser {
         this.delegate = driver;
     }
 
-    public SelfHealingDriver setup(String browser, String version,Boolean useGrid) throws Exception {
+    public SelfHealingDriver setup(String browser, String version, Boolean useGrid) throws Exception {
         if (useGrid == true) {
             caps = new DesiredCapabilities();
             caps.setBrowserName(browser);
             delegate = new RemoteWebDriver(new URL(Node), caps);
         }
-         if (browser.equalsIgnoreCase("firefox")) {
+        if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             delegate = new FirefoxDriver();
             driver = SelfHealingDriver.create(delegate);
             driver.manage().window().maximize();
+
         } else if (browser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", version);
             delegate = new ChromeDriver();
             driver = SelfHealingDriver.create(delegate);
             driver.manage().window().maximize();
-            return driver;
+
         } else if (browser.equalsIgnoreCase("chrome-headless")) {
             ChromeOptions options = new ChromeOptions();
             System.setProperty("webdriver.chrome.driver", version);
             delegate = new EventFiringWebDriver(new ChromeDriver(options.addArguments("--headless")));
             driver = SelfHealingDriver.create(delegate);
-            return driver;
+
         } else if (browser.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             delegate = new EdgeDriver();
             driver = SelfHealingDriver.create(delegate);
+
         } else {
             throw new Exception("Browser is not correct");
         }

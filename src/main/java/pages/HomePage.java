@@ -1,10 +1,6 @@
 package pages;
 
-import com.epam.healenium.SelfHealingDriver;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.WebDriver;
-
-import java.io.IOException;
 
 
 public class HomePage extends PageBase {
