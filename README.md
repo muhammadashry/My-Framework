@@ -1,6 +1,8 @@
 # My-Framework
 Designing Test Automation Framework using selenium Webdriver 
+
 There were three main concepts kept in mind while building the framework which are Readability, Modularity, and minimizing the redundancy
+
 This Framework:
 • Designed with POM Pattern.
 • Support Multiple Browsers.
