@@ -19,34 +19,52 @@ public class MyActions {
         switch (by) {
             case "xpath":
                 if (click == true) {
-                    driver.findElement(By.xpath(locator)).click();
-                    log.getLog("Get this locator: " + locator);
+                    try {
+                        driver.findElement(By.xpath(locator)).click();
+                        log.getLog("Get this locator: " + locator);
+                    } catch (Exception e) {
+                        log.getLog("Error occurs while clicking on locator: " + locator);
+                        driver.findElement(By.xpath(locator)).submit();
+                    }
                 }
                 break;
             case "id":
                 if (click == true) {
-                    driver.findElement(By.id(locator)).click();
-                    log.getLog("Get this locator: " + locator);
+                    try {
+                        driver.findElement(By.id(locator)).click();
+                        log.getLog("Get this locator: " + locator);
+                    } catch (Exception e) {
+                        log.getLog("Error occurs while clicking on locator: " + locator);
+                        driver.findElement(By.id(locator)).submit();
+                    }
                 }
                 break;
             case "name":
                 if (click == true) {
-                    driver.findElement(By.name(locator)).click();
-                    log.getLog("Get this locator: " + locator);
+                    try {
+                        driver.findElement(By.name(locator)).click();
+                        log.getLog("Get this locator: " + locator);
+                    } catch (Exception e) {
+                        log.getLog("Error occurs while clicking on locator: " + locator);
+                        driver.findElement(By.name(locator)).submit();
+                    }
                 }
                 break;
             case "linktext":
                 if (click == true) {
-                    driver.findElement(By.linkText(locator)).click();
-                    System.out.println("Page navigated: " + driver.getTitle());
-                    log.getLog("Get this locator: " + locator);
+                    try {
+                        driver.findElement(By.linkText(locator)).click();
+                        log.getLog("Get this locator: " + locator);
+                    } catch (Exception e) {
+                        log.getLog("Error occurs while clicking on locator: " + locator);
+                        driver.findElement(By.linkText(locator)).submit();
+                    }
                 }
                 break;
             default:
                 System.out.println("Error in the locator");
         }
     }
-
     public void makeAction(String by, String locator, String sendKeys) {
         switch (by) {
             case "xpath":

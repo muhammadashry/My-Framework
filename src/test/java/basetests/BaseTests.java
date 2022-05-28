@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class BaseTests extends AbstractTestNGCucumberTests {
-    protected static WebDriver driver;
+    protected WebDriver driver;
     protected HomePage homePage;
     protected Properties properties;
     protected CrossBrowser initiateBrowser;
@@ -35,8 +35,8 @@ public class BaseTests extends AbstractTestNGCucumberTests {
         assertions = new Assertions(driver);
         homePage = new HomePage(driver);
         driver.get(properties.getProperty("site.automationpractice.url"));
-        assertions.assertOnPage(driver, "My Store", "es7aa");
-        log.getLog("Open browser");
+        assertions.assertOnPage(driver, "My Store", "Your not in the home page");
+        log.getLog("Browser opened");
     }
 
     @AfterMethod
